@@ -18,7 +18,7 @@ import java.io.File;
 public class StubMojo extends AbstractMojo {
 
     public void execute() throws MojoExecutionException, MojoFailureException {
-        getLog().info("This is my mojo");
+        getLog().info("This is my stub mojo");
         File directory = new File("./target/classes");//设定为当前文件夹
         try{
             getLog().info(directory.getCanonicalPath());//获取标准的路径

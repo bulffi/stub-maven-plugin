@@ -17,7 +17,7 @@
       </execution>
       <execution>
         <id>redirect-output</id>
-        <phase>process-test-classes</phase>
+        <phase>process-test-sources</phase>
         <goals>
           <goal>redirect</goal>
         </goals>

@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="stub-maven-plugin" options="" />
+      <module name="stub-maven-plugin" options="-bootclasspath /Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre/lib/rt.jar" />
     </option>
   </component>
 </project>

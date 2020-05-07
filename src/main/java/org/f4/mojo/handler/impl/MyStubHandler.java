@@ -33,7 +33,7 @@ public class MyStubHandler implements StubHandler {
         return classWriter.toByteArray();
     }
     public static void transform(ClassNode cn) {
-        for (MethodNode mn : (List<MethodNode>) cn.methods) {
+        for (MethodNode mn : cn.methods) {
             if ("<init>".equals(mn.name) || "<clinit>".equals(mn.name)){
                 continue;
             }
@@ -56,7 +56,6 @@ public class MyStubHandler implements StubHandler {
                         inns.insert(in.getPrevious(), i2);
                 }
             }
-//            System.out.println(mn.access);
             if((mn.access/8) % 2 != 1) {
                 InsnList i2 = new InsnList();
                 i2.add(new FieldInsnNode(Opcodes.GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;"));
